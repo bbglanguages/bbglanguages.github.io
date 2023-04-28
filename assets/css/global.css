@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Trocchi';
+  src: url('{{ site.baseurl }}/assets/fonts/Trocchi-Regular.ttf');
+}
+
+:root {
+  --color-primary: #f9d319;
+  --color-primary--half-opacity: #f9d3197a;
+  --color-secondary: #fffbef;
+  --color-grey-dark: #4a4747;
+  --color-grey-light: 868585;
+  --color-white: #ffffff;
+
+  --font-family-primary: 'Trocchi';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary--half-opacity);
+  /* font-family: var(--font-family-primary), serif; */
+  font-family: 'Trocchi', serif;
+  color: var(--color-grey-dark);
+}

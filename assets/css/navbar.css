@@ -1,0 +1,28 @@
+nav {
+  background-color: var(--color-primary);
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__logo {
+  display: inline;
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--color-grey-dark);
+  margin-right: 3rem;
+  border-radius: 100%;
+}
+
+.nav__blog-name {
+  font-size: 12rem;
+  margin-left: 1rem;
+  font-weight: lighter;
+  line-height: 13rem;
+}
+
+.nav__blog-name__subname{
+  font-size: 3rem;
+  margin-left: 1rem;
+}
