@@ -4,16 +4,20 @@
   <body>
     {% include navbar.html %}
     {{ content }} 
+
+    <h2>Blog</h2>
     {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
+    <h2>Pages</h2>
     {% for post in site.pages %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
+    <h2>Services</h2>
     {% for post in site.services %}
     <li>
       post.title
