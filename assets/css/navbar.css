@@ -18,11 +18,12 @@ nav {
 .nav__blog-name {
   font-size: 12rem;
   margin-left: 1rem;
-  font-weight: lighter;
   line-height: 13rem;
+  font-weight: lighter;
 }
 
-.nav__blog-name__subname{
+.nav__blog-name__subname {
   font-size: 3rem;
   margin-left: 1rem;
+  font-weight: lighter;
 }
