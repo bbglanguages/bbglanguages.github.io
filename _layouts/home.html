@@ -2,7 +2,13 @@
 <html lang="en">
   {% include html_head.html %}
   <body>
-    {% include navbar.html %} {{ content }}
+    {% include navbar.html %} {{ content }} 
+    
+    {% for utility in site.utilities %}
+      {% if utility.title == 'Greetings' %}
+      <p> {{ utility.content }} </p>
+      {% endif %} 
+{% endfor %}
 
     <h2>Blog</h2>
     {% for post in site.posts %}
@@ -12,12 +18,13 @@
     {% endfor %}
 
     <h2>Pages</h2>
-    {% for post in site.pages %} {% if post.layout != "home" and post.title !=
-    nil %}
+    {% for utility in site.utilities %}
+    {% if utility.title != 'Greetings' %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ utility.url }}">{{ utility.title }}</a>
     </li>
-    {% endif %} {% endfor %}
+    {% endif %} 
+    {% endfor %}
 
     <h2>Services</h2>
     {% for service in site.services %}
