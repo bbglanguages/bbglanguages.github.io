@@ -1,5 +1,5 @@
 ---
-title: Home of BBG Languages
+title: BBG Languages
 layout: home
 ---
 
