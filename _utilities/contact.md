@@ -1,6 +1,6 @@
 ---
 title: Contact
-permalink: "/contact/"
+permalink: /contact/
 usernameInstagram: "@bbglanguages"
 numberWhatsapp: "+123456789"
 usernameLinkedin: "@bbglanguages"
