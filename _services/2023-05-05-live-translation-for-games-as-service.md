@@ -1,5 +1,6 @@
 ---
+title: Service 1
 layout: services
-title: Live Translation for Games as Service
 ---
-The best one
+
+Description of Service 1

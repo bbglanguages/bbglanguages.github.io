@@ -2,33 +2,51 @@
 <html lang="en">
   {% include html_head.html %}
   <body>
-    {% include navbar.html %} {{ content }} 
-    
-    {% for utility in site.utilities %}
-      {% if utility.title == 'Greetings' %}
-      <p> {{ utility.content }} </p>
-      {% endif %} 
-{% endfor %}
+    <div id="nav-wrapper"> {% include navbar.html %} </div>
 
-    <h2>Blog</h2>
-    {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
+    <div id="main-wrapper">
+      <!-- Greetings text -->
+      <div class="greetings-section">
+        {% for utility in site.utilities %} {% if utility.title == 'Greetings'
+        %}
+        <p> {{ utility.content }} </p>
+        {% endif %} {% endfor %}
+      </div>
 
-    <h2>Pages</h2>
-    {% for utility in site.utilities %}
-    {% if utility.title != 'Greetings' %}
-    <li>
-      <a href="{{ utility.url }}">{{ utility.title }}</a>
-    </li>
-    {% endif %} 
-    {% endfor %}
+      <!-- Services -->
+      <div class="content-section__services">
+        <h2 class="content-section__services-title">Services</h2>
+        <span class="content-section__title-separator"></span>
+        <div class="content-section__posts-services">
+          {% for service in site.services %}
+          <div class="content-section__posts-services__item">
+            <li>
+              <a href="{{ service.url }}"> {{service.title}} </a>
+            </li>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
 
-    <h2>Services</h2>
-    {% for service in site.services %}
-    <li> <a href="{{ service.url }}"> {{service.title}} </a></li>
-    {% endfor %}
+      <!-- Blog posts -->
+      <div class="content-section__blog">
+        <h2 class="content-section__blog-title">Blog</h2>
+        <span class="content-section__title-separator"></span>
+        <div class="content-section__posts-blog">
+          {% for post in site.posts %}
+          <div class="content-section__posts-blog__item">
+            <div class="content-section__posts-blog__item__image"></div>
+            <div class="content-section__posts-blog__item__title">
+              <p>{{ post.title }}</p>
+            </div>
+            <div class="content-section__posts-blog__item__content">
+              {{ post.excerpt }}
+            </div>
+            <a class="button button-sm" href="{{ post.url }}"> Read This Post </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </body>
 </html>
