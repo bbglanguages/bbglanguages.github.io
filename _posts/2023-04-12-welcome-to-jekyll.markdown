@@ -1,29 +1,32 @@
 ---
+title: Projetos de Localização - A primeira etapa
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2023-04-12 17:00:24 +0200
+date: '2023-04-12 17:00:24 +0200'
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+Estou começando um novo projeto de #localização de site com 21 páginas da web no campo de #cibersegurança. Montei um passo a passo para a primeira parte de cada projeto, mostrando o que é preciso fazer antes de mergulhar na #tradução:
 
-`YEAR-MONTH-DAY-title.MARKUP`
+1. Preparação 👩‍💻
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Nivelar as expectativas e preparar os arquivos originais, que, nesse caso, são páginas HTML. Precisarei baixar e, provavelmente, convertê-los para uma extensão que eu possa trabalhar;
 
-Jekyll also offers powerful support for code snippets:
+2. Arquivos de referência 🌐
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Verificar se essas páginas já foram traduzidas para outros idiomas (estou trabalhando do #inglês para o #português, mas é comum encontrar ótimas soluções em #espanhol e #francês, o que sempre me ajuda!);
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+3. Envio do orçamento e do cronograma estimado ⏱️
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+A parte de tradução é contabilizada conforme o número de palavras; os testes de localização (se necessário) são calculados em horas; o prazo dependerá das necessidades do cliente;
+
+4. Validação de glossário ✅
+
+Na verdade, isso ocorre durante o desenvolvimento do projeto, mas como é um cliente de longa data, acho que já temos tudo pronto para começar;
+
+5. Tradução e localização 🤓
+
+Mãos à obra! Hora de trabalhar com palavras, interface do usuário, experiência do usuário e ajustes culturais antes de passar para a próxima parte do projeto!
+
+A tradução em si é uma parte do trabalho! E olha que falei apenas da etapa de “preparação”.
+
+✨ Mostrar o passo a passo para os clientes é a prova do trabalho valioso que entregamos na #localização.

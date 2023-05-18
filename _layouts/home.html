@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include html_head.html %}
+  <head>
+    {% include html_head.html %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css" />
+  </head>
   <body>
-    <div id="nav-wrapper"> {% include navbar.html %} </div>
+    <div id="nav-wrapper">
+      <nav>
+        <div class="nav__logo"></div>
+        <div class="nav__text-elements">
+          <h1 class="nav__blog-name">BBG</h1>
+          <h2 class="nav__blog-name__subname">Languages Solutions</h2>
+        </div>
+        <div class="nav__links-elements">
+          <ul>
+            <li><a href="{{ site.baseurl }}">Services</a></li>
+            <span>•</span>
+            <li><a href="{{ site.baseurl }}">Blog</a></li>
+            <span>•</span>
+            <li><a href="{{ site.baseurl }}">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <div id="main-wrapper">
       <!-- Greetings text -->
@@ -20,9 +40,8 @@
         <div class="content-section__posts-services">
           {% for service in site.services %}
           <div class="content-section__posts-services__item">
-            <li>
-              <a href="{{ service.url }}"> {{service.title}} </a>
-            </li>
+            <h3> {{ service.title}} </h3>
+            <a class="button button-sm" href="{{ service.url }}">Saiba Mais</a>
           </div>
           {% endfor %}
         </div>
@@ -42,7 +61,9 @@
             <div class="content-section__posts-blog__item__content">
               {{ post.excerpt }}
             </div>
-            <a class="button button-sm" href="{{ post.url }}"> Read This Post </a>
+            <a class="button button-sm" href="{{ post.url }}">
+              Read This Post
+            </a>
           </div>
           {% endfor %}
         </div>
