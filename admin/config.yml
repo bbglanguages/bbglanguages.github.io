@@ -19,10 +19,14 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-      - { label: 'Category', name: 'category', widget: 'string', default: 'jekyll' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'string',
+          default: 'jekyll',
+        }
       - { label: 'Summary', name: 'summary', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
 
   - name: 'service' # Used in routes, e.g., /admin/collections/blog
     label: 'Services' # Used in the UI
@@ -30,7 +34,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'services' }
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'services',
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -40,6 +49,26 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'utilities' }
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'utilities',
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'contact' # Used in routes, e.g., /admin/collections/blog
+    label: 'Contacts' # Used in the UI
+    folder: '_contacts' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - { label: 'Channel', name: 'channel', widget: 'string' }
+      - { label: 'Address', name: 'address', widget: 'string' }

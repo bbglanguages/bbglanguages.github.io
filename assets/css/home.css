@@ -68,6 +68,7 @@ nav {
 
 .nav__links-elements > ul > li > a {
   text-decoration: none;
+  color: var(--color-grey-dark);
 }
 
 .nav__links-elements > ul > li > a:visited {
@@ -102,7 +103,8 @@ nav {
 }
 
 .content-section__services-title,
-.content-section__blog-title {
+.content-section__blog-title,
+.content-section__contact {
   margin: 0;
 }
 
@@ -115,10 +117,14 @@ nav {
 }
 
 .content-section__posts-services__item,
-.content-section__posts-blog__item {
+.content-section__posts-blog__item,
+.content-section__contact-channels__item {
   text-align: center;
   background-color: var(--color-secondary);
   border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
 }
 
 .content-section__posts-services__item {
@@ -156,7 +162,7 @@ nav {
 
 .content-section__posts-blog__item {
   display: grid;
-  grid-template-columns: 30% calc(70% - 1rem);
+  grid-template-columns: 10rem calc(100% - 10.725rem);
   grid-template-rows: 10rem 15rem 5rem;
   gap: 0.725rem;
   padding-bottom: 1rem;
@@ -178,6 +184,55 @@ nav {
   padding: 1rem 1.5rem;
   text-align: justify;
   font-size: 1.2rem;
+}
+
+.content-section__contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 7rem auto;
+  grid-template-rows: auto auto;
+  margin-bottom: 4rem;
+}
+
+.content-section__contact-title {
+  margin: 0;
+}
+
+.content-section__contact-channels {
+  grid-column: 1 / 3;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.content-section__contact-channels__item {
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.content-section__contact-channels__item > h3 {
+  background-color: var(--color-primary);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.content-section__contact-channels__item > p {
+  font-size: 1.2rem;
+}
+
+.content-section__contact-channels__item > p > a:visited {
+  color: var(--color-grey-dark);
 }
 
 .button {

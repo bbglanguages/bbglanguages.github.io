@@ -18,7 +18,7 @@
             <span>•</span>
             <li><a href="{{ site.baseurl }}">Blog</a></li>
             <span>•</span>
-            <li><a href="{{ site.baseurl }}">Contact</a></li>
+            <li><a href="{{ site.baseurl }}#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -68,6 +68,22 @@
           {% endfor %}
         </div>
       </div>
+
+      <!-- Contact -->
+      <div id="contact" class="content-section__contact">
+        <h2 class="content-section__contact-title">Contact</h2>
+        <span class="content-section__title-separator"></span>
+        <div class="content-section__contact-channels">
+          {% for contact in site.contacts %}
+          <div class="content-section__contact-channels__item">
+            <h3> {{ contact.title}} </h3>
+            {{ contact.content }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
+
+    {% include footer.html %}
   </body>
 </html>

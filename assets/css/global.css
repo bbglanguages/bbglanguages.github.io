@@ -6,3 +6,37 @@ body {
   color: var(--color-grey-dark);
   background-color: var(--color-background);
 }
+
+footer {
+  background-color: var(--color-grey-dark);
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 2rem 0 1rem 0;
+}
+
+footer > .footer-section__logo {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer > .footer-section__logo > .image {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  text-align: center;
+}
+
+footer > .footer-section__logo > .text {
+  font-size: 1.5rem;
+}
+
+footer > .footer-section__copyright {
+  text-align: center;
+}
