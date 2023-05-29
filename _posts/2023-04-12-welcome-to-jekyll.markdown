@@ -2,7 +2,8 @@
 title: Projetos de Localização - A primeira etapa
 layout: post
 date: '2023-04-12 17:00:24 +0200'
-categories: jekyll update
+categories:
+- ''
 ---
 
 Estou começando um novo projeto de #localização de site com 21 páginas da web no campo de #cibersegurança. Montei um passo a passo para a primeira parte de cada projeto, mostrando o que é preciso fazer antes de mergulhar na #tradução:

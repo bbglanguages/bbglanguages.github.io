@@ -1,3 +1,14 @@
+:root {
+  --color-primary: #f9d319;
+  --color-secondary: #fce990;
+  --color-background: #fff7d4;
+  --color-grey-dark: #4a4747;
+  --color-grey-light: 868585;
+  --color-white: #ffffff;
+
+  --font-family-primary: 'Trocchi';
+}
+
 html,
 body {
   margin: 0;
@@ -21,8 +32,8 @@ footer {
 
 footer > .footer-section__logo {
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer > .footer-section__logo > .image {

@@ -1,5 +1,6 @@
 ---
 title: Cibersegurança e Linguagem Inclusiva
+layout: post
 ---
 
 Veja abaixo alguns exemplos de como é possível alcançar seus objetivos com adaptações pensadas para incluir seus leitores e leitoras com pequenas modificações.

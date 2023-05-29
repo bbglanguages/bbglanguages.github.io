@@ -1,14 +1,3 @@
-:root {
-  --color-primary: #f9d319;
-  --color-secondary: #fce990;
-  --color-background: #fff7d4;
-  --color-grey-dark: #4a4747;
-  --color-grey-light: 868585;
-  --color-white: #ffffff;
-
-  --font-family-primary: 'Trocchi';
-}
-
 #nav-wrapper {
   background-color: var(--color-primary);
 }
