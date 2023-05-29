@@ -38,7 +38,7 @@ collections:
           label: 'Layout',
           name: 'layout',
           widget: 'hidden',
-          default: 'services',
+          default: 'service',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -70,5 +70,3 @@ collections:
           widget: 'hidden',
           default: 'contacts',
         }
-      - { label: 'Channel', name: 'channel', widget: 'string' }
-      - { label: 'Address', name: 'address', widget: 'string' }

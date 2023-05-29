@@ -5,7 +5,7 @@
 
 nav {
   display: grid;
-  grid-template-columns: 10rem auto 50%;
+  grid-template-columns: 7rem auto 50%;
   height: auto;
   padding: 1rem;
   margin: 0;
@@ -13,9 +13,9 @@ nav {
 }
 
 .nav__logo {
-  height: 8rem;
-  width: 8rem;
-  min-width: 8rem;
+  height: 6rem;
+  width: 6rem;
+  min-width: 6rem;
   background-color: var(--color-grey-dark);
   border-radius: 100%;
 }

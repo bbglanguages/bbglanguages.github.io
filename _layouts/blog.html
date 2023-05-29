@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include html_head.html %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blog.css" />
+  </head>
+  <body>
+    {% include navbar.html %}
+    <div class="main-wrapper">
+      <p class="post-category">Blog</p>
+
+      <p class="post-description"
+        >Últimos conteúdos produzidos:</p
+      >
+
+      <div class="content-section__blog">
+        <span class="content-section__title-separator"></span>
+        <div class="content-section__posts-blog">
+          {% for post in site.posts %}
+          <div class="content-section__posts-blog__item">
+            <div class="content-section__posts-blog__item__image"></div>
+            <div class="content-section__posts-blog__item__title">
+              <p>{{ post.title }}</p>
+            </div>
+            <div class="content-section__posts-blog__item__content">
+              {{ post.excerpt }}
+            </div>
+            <a class="button button-sm" href="{{ post.url }}">
+              Read This Post
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body></html
+>

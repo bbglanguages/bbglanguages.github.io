@@ -1,0 +1,5 @@
+---
+title: BBG Languages Blog
+layout: blog
+---
+
