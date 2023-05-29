@@ -70,3 +70,5 @@ collections:
           widget: 'hidden',
           default: 'contacts',
         }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
