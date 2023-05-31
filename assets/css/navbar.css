@@ -1,6 +1,12 @@
 #nav-wrapper {
   background-color: var(--color-primary);
   width: 100%;
+  --mask: radial-gradient(49.2px at 50% calc(100% - 69px), #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(49.2px at 50% calc(100% + 39px), #0000 99%, #000 101%) 50%
+      calc(100% - 30px) / 120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 nav {
@@ -10,6 +16,7 @@ nav {
   padding: 1rem;
   margin: 0;
   align-items: center;
+  padding-bottom: 5rem;
 }
 
 .nav__logo {
@@ -47,6 +54,7 @@ nav {
 .nav__links-elements {
   display: inline-block;
   text-align: right;
+  padding-top: 2rem;
 }
 
 .nav__links-elements > ul > li {
