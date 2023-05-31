@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     {% include html_head.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/institucional.css" />
   </head>
   <body>
     <div id="nav-wrapper">
@@ -16,7 +16,7 @@
           <ul>
             <li><a href="{{ site.baseurl }}#services">Services</a></li>
             <span>•</span>
-            <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+            <li><a href="{{ site.url }}">Blog</a></li>
             <span>•</span>
             <li><a href="{{ site.baseurl }}#contact">Contact</a></li>
           </ul>
@@ -68,7 +68,7 @@
           {% endfor %}
         </div>
 
-        <a class="button button-secondary" href="{{ site.baseurl }}/blog">
+        <a class="button button-secondary" href="{{ site.url }}">
           Read the Blog
         </a>
       </div>

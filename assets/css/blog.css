@@ -69,6 +69,17 @@
   font-size: 1.2rem;
 }
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pagination-wrapper > span > a,
+.pagination-wrapper > span > a:visited {
+  color: var(--color-grey-dark);
+  text-decoration: underline;
+}
+
 .button {
   background-color: var(--color-grey-dark);
   margin: 0 auto;
