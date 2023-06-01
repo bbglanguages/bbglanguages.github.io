@@ -182,6 +182,25 @@ nav {
   font-size: 1.2rem;
 }
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+  font-size: 1.3rem;
+  background-color: var(--color-secondary);
+  padding: 1rem 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+}
+
+.pagination-wrapper > span > a,
+.pagination-wrapper > span > a:visited {
+  color: var(--color-grey-dark);
+  text-decoration: underline;
+}
+
 .content-section__contact {
   width: 100%;
   display: grid;

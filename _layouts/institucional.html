@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     {% include html_head.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/institucional.css" />
+    <link
+      rel="stylesheet"
+      href="{{ site.baseurl }}/assets/css/institucional.css"
+    />
   </head>
   <body>
     <div id="nav-wrapper">
@@ -16,7 +19,7 @@
           <ul>
             <li><a href="{{ site.baseurl }}#services">Services</a></li>
             <span>•</span>
-            <li><a href="{{ site.url }}">Blog</a></li>
+            <li><a href="{{ site.url }}#blog">Blog</a></li>
             <span>•</span>
             <li><a href="{{ site.baseurl }}#contact">Contact</a></li>
           </ul>
@@ -48,11 +51,11 @@
       </div>
 
       <!-- Blog posts -->
-      <div class="content-section__blog">
+      <div class="content-section__blog" id="blog">
         <h2 class="content-section__blog-title">Blog</h2>
         <span class="content-section__title-separator"></span>
         <div class="content-section__posts-blog">
-          {% for post in site.posts %}
+          {% for post in paginator.posts %}
           <div class="content-section__posts-blog__item">
             <div class="content-section__posts-blog__item__image"></div>
             <div class="content-section__posts-blog__item__title">
@@ -67,10 +70,26 @@
           </div>
           {% endfor %}
         </div>
+      </div>
 
-        <a class="button button-secondary" href="{{ site.url }}">
-          Read the Blog
-        </a>
+      <div class="pagination-wrapper">
+        {% if paginator.page != 1 %}
+        <span>
+          <a href="{{paginator.previous_page_path}}#blog">Previous</a>
+        </span>
+        {% else %}
+        <span>
+          <a href="{{paginator.previous_page_path}}#blog"></a>
+        </span>
+        {% endif %}
+        <span>•</span>
+        <span> {{ paginator.page }} of {{ paginator.total_pages }} </span>
+        <span>•</span>
+        {% if paginator.page != paginator.total_pages %}
+        <span><a href="{{paginator.next_page_path}}#blog">More</a></span>
+        {% else %}
+        <span><a href="{{paginator.next_page_path}}#blog"></a></span>
+        {% endif %}
       </div>
 
       <!-- Contact -->
