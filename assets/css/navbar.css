@@ -74,3 +74,33 @@ nav {
 .nav__links-elements > ul > li > a:visited {
   color: var(--color-grey-dark);
 }
+
+@media screen and (max-width: 1024px) {
+  #nav-wrapper {
+    --mask: radial-gradient(
+          9.33px at 50% calc(100% - 12.8px),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 16px) 0/32px 100%,
+      radial-gradient(9.33px at 50% calc(100% + 4.8px), #0000 99%, #000 101%)
+        50% calc(100% - 8px) / 32px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  nav {
+    grid-template-columns: 1fr;
+    padding-bottom: 3.5rem;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  nav > a {
+    justify-self: right;
+  }
+
+  .nav__links-elements,
+  .nav__text-elements {
+    display: none;
+  }
+}
