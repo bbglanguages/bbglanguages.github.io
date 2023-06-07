@@ -31,3 +31,14 @@
 .service-content::first-letter {
   font-size: 4rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .main-wrapper {
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .service-content {
+    padding-top: 1.5rem;
+  }
+}
