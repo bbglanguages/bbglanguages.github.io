@@ -31,9 +31,7 @@
       <!-- Greetings text -->
       <div class="greetings-section">
         {% for utility in site.utilities %} {% if utility.title == 'Greetings'
-        %}
-        <p> {{ utility.content }} </p>
-        {% endif %} {% endfor %}
+        %} {{ utility.content }} {% endif %} {% endfor %}
       </div>
 
       <!-- Services -->
@@ -63,10 +61,10 @@
             </div>
             <div class="content-section__posts-blog__item__content">
               {{ post.excerpt }}
+              <a class="button button-sm" href="{{ post.url }}">
+                Read This Post
+              </a>
             </div>
-            <a class="button button-sm" href="{{ post.url }}">
-              Read This Post
-            </a>
           </div>
           {% endfor %}
         </div>

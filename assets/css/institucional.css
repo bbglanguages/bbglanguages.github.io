@@ -159,7 +159,7 @@ nav {
 .content-section__posts-blog__item {
   display: grid;
   grid-template-columns: 10rem calc(100% - 10.725rem);
-  grid-template-rows: 10rem 15rem 5rem;
+  grid-template-rows: 10rem auto;
   gap: 0.725rem;
   padding-bottom: 1rem;
 }
@@ -180,6 +180,7 @@ nav {
   padding: 1rem 1.5rem;
   text-align: justify;
   font-size: 1.2rem;
+  display: grid;
 }
 
 .pagination-wrapper {
@@ -269,4 +270,98 @@ nav {
   padding: 2rem 3rem;
   font-size: 1.5rem;
   margin: 2rem auto;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 35% 15%;
+    padding: 2rem 0;
+    row-gap: 1.6rem;
+    height: 30rem;
+  }
+
+  .nav__logo {
+    height: 10rem;
+    width: 10rem;
+    min-width: 10rem;
+    grid-row: 1 / 2;
+  }
+
+  .nav__text-elements {
+    grid-row: 2 / 3;
+    text-align: center;
+  }
+
+  .nav__blog-name {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  .nav__blog-name__subname {
+    font-size: 1.5rem;
+  }
+
+  .nav__links-elements {
+    grid-column: 1/3;
+    text-align: center;
+  }
+
+  .nav__links-elements > ul {
+    padding: 0;
+  }
+
+  .nav__links-elements > ul > li {
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .greetings-section {
+    font-size: 1.2rem;
+    width: 90%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .content-section__services {
+    grid-template-columns: 7rem auto;
+    margin: 4rem 0;
+  }
+
+  .content-section__services-title,
+  .content-section__blog-title {
+    font-size: 1.5rem;
+  }
+
+  .content-section__posts-services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  .content-section__blog {
+    grid-template-columns: 5rem auto;
+  }
+
+  .content-section__posts-blog {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section__posts-blog__item {
+    grid-template-rows: 10rem auto;
+  }
+
+  .content-section__contact-channels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-section__contact-channels {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button {
+    align-self: center;
+  }
 }
