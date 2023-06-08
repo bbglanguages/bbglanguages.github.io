@@ -329,6 +329,10 @@ nav {
     margin: 4rem 0;
   }
 
+  .content-section__posts-services__item {
+    height: 160px;
+  }
+
   .content-section__services-title,
   .content-section__blog-title {
     font-size: 1.5rem;
@@ -336,8 +340,17 @@ nav {
 
   .content-section__posts-services {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 4rem 0;
+  }
+
+  .content-section__posts-services__item > h3 {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .content-section__posts-services__item > a {
+    font-size: 1rem;
   }
 
   .content-section__blog {
