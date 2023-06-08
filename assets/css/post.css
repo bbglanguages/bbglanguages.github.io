@@ -23,8 +23,15 @@
   font-weight: normal;
 }
 
+.post-header-image-wrapper {
+  max-width: 100%; /* Ensure the container adjusts to the available width */
+  text-align: center; /* Center the image horizontally if necessary */
+}
+
 .post-header-image {
-  height: 30rem;
+  max-width: 100%; /* Ensure the image adjusts to the container's width */
+  min-height: 30rem;
+  max-height: 36.75rem; /* Maintain aspect ratio and prevent distortion */
   background-color: var(--color-primary);
   margin: 3rem 0;
   border-radius: 5px;
@@ -34,6 +41,25 @@
 }
 .post-content::first-letter {
   font-size: 4rem;
+}
+
+.button {
+  margin: 4rem auto 0 auto;
+  display: flex;
+}
+
+.button > a {
+  background-color: var(--color-grey-dark);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  align-self: center;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
 }
 
 @media screen and (max-width: 1024px) {

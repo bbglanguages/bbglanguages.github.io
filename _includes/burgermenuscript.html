@@ -1,0 +1,17 @@
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeIcon = document.getElementById('close-icon');
+  const burgerMenuIcon = document.getElementById('burger-menu-icon');
+
+  burgerMenuIcon.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('hidden-mobile-menu')) {
+      mobileMenu.classList.remove('hidden-mobile-menu');
+    }
+  });
+
+  closeIcon.addEventListener('click', () => {
+    if (!mobileMenu.classList.contains('hidden-mobile-menu')) {
+      mobileMenu.classList.add('hidden-mobile-menu');
+    }
+  });
+</script>
