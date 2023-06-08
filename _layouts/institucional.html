@@ -76,9 +76,7 @@
           <a href="{{paginator.previous_page_path}}#blog">Previous</a>
         </span>
         {% else %}
-        <span>
-          <a href="{{paginator.previous_page_path}}#blog"></a>
-        </span>
+        <span class="disabled" href="">Previous</span>
         {% endif %}
         <span>•</span>
         <span> {{ paginator.page }} of {{ paginator.total_pages }} </span>
@@ -86,7 +84,7 @@
         {% if paginator.page != paginator.total_pages %}
         <span><a href="{{paginator.next_page_path}}#blog">More</a></span>
         {% else %}
-        <span><a href="{{paginator.next_page_path}}#blog"></a></span>
+        <span class="disabled">More</span>
         {% endif %}
       </div>
 

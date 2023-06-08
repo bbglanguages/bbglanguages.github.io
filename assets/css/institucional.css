@@ -272,6 +272,12 @@ nav {
   margin: 2rem auto;
 }
 
+.disabled {
+  color: var(--color-grey-light) !important;
+  cursor: default !important;
+  text-decoration: none !important;
+}
+
 @media screen and (max-width: 1024px) {
   nav {
     display: grid;
