@@ -20,9 +20,9 @@ nav {
 }
 
 .nav__logo {
-  height: 6rem;
-  width: 6rem;
-  min-width: 6rem;
+  height: 4rem;
+  width: 4rem;
+  min-width: 4rem;
   background-color: var(--color-grey-dark);
   border-radius: 100%;
 }
