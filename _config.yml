@@ -45,7 +45,7 @@ plugins:
   - jekyll-admin
   - jekyll-paginate
 
-paginate: 3 
+paginate: 2
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
