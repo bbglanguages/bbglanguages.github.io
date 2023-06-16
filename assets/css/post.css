@@ -10,14 +10,17 @@
 
 .post-category {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .post-title {
   border-bottom: 1px solid var(--color-grey-dark);
   margin-bottom: 0;
+  font-size: 2rem;
 }
+
 .post-publishing-date {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   margin: 1rem 0;
   font-weight: normal;
@@ -39,8 +42,13 @@
   -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
 }
+
+.post-content {
+  font-size: 1rem;
+}
+
 .post-content::first-letter {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .button {
