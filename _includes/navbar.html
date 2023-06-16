@@ -1,17 +1,9 @@
-<div id="mobile-menu" class="mobile-menu hidden-mobile-menu">
-  <div id="close-icon" class="close-icon"> {% include close_icon.html %} </div>
-
-  <div class="mobile_menu__nav__links-elements">
-    <ul>
-      <li><a href="{{ site.url }}#services">SERVICES</a></li>
-      <li><a href="{{ site.url }}#blog">BLOG</a></li>
-      <li><a href="{{ site.url }}#contact">CONTACT</a></li>
-    </ul>
-  </div>
-</div>
+{% include horizontal_menu.html %}
 <div id="nav-wrapper">
   <nav>
-    <div id="burger-menu-icon" class="burger-menu-icon">{% include menu_icon.html %}</div>
+    <div id="burger-menu-icon" class="burger-menu-icon"
+      >{% include menu_icon.html %}</div
+    >
     <a href="{{site.url}}"><div class="nav__logo"></div></a>
     <div class="nav__text-elements">
       <h1 class="nav__blog-name"><a href="{{site.url}}">BBG</a></h1>

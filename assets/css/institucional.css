@@ -8,6 +8,67 @@
   mask: var(--mask);
 }
 
+.burger-menu-icon {
+  top: 1rem;
+  left: 1.25rem;
+  position: absolute;
+  fill: var(--color-nav-menu-icon);
+}
+
+.mobile-menu {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 80vw;
+  max-width: 20rem;
+  background-color: var(--color-nav-menu);
+  z-index: 2;
+  left: 0;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  transition: all 0.15s ease-in-out;
+}
+
+.close-icon {
+  text-align: right;
+  fill: var(--color-white);
+}
+
+.close-icon > svg {
+  width: 2rem;
+  padding: 1rem;
+}
+
+.nav__setting-elements {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px dotted var(--color-white);
+  margin: 0 auto;
+  padding: 2rem;
+}
+.nav__setting-elements__theme-button {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary);
+  fill: var(--color-white);
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.23);
+}
+
+.nav__setting-elements__theme-button > svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.nav__setting-elements > .active {
+  -webkit-box-shadow: 0 0 7px 2px rgb(255 255 255);
+  -moz-box-shadow: 0 0 7px 2px rgb(255 255 255);
+  box-shadow: 0 0 7px 2px rgb(255 255 255);
+}
+
 nav {
   display: grid;
   grid-template-columns: auto auto;
@@ -252,12 +313,12 @@ nav {
 }
 
 .button {
-  background-color: var(--color-grey-dark);
+  background-color: var(--color-button);
   margin: 0 auto;
   grid-column: 1/3;
   align-self: center;
   padding: 1rem 1.5rem;
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -278,14 +339,19 @@ nav {
   text-decoration: none !important;
 }
 
+.hidden-mobile-menu {
+  left: -82vw !important;
+}
+
 @media screen and (max-width: 1024px) {
   nav {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 35% 35% 15%;
+    grid-template-rows: 1fr 1fr;
     padding: 2rem 0;
     row-gap: 1.6rem;
-    height: 30rem;
+    height: 25rem;
+    margin-bottom: 2.5rem;
   }
 
   .nav__logo {

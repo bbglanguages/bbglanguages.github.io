@@ -1,11 +1,28 @@
-:root {
+[data-theme='light'] {
   --color-primary: #f9d319;
   --color-secondary: #fce990;
   --color-background: #fff7d4;
   --color-grey-dark: #4a4747;
   --color-grey-light: #868585;
   --color-white: #ffffff;
+  --color-button: #4a4747;
+  --color-nav-menu: #4a4747;
+  --color-nav-menu-icon: #4a4747;
+  --color-footer: #4a4747;
+  --font-family-primary: 'Trocchi';
+}
 
+[data-theme='dark'] {
+  --color-primary: #4b2e89;
+  --color-secondary: #a65ff9;
+  --color-background: #1c0155;
+  --color-grey-dark: #fff;
+  --color-grey-light: #fff;
+  --color-button: #4b2e89;
+  --color-white: #ffffff;
+  --color-nav-menu: #a65ff9;
+  --color-nav-menu-icon: #ffffff;
+  --color-footer: #4b2e89;
   --font-family-primary: 'Trocchi';
 }
 
@@ -17,10 +34,11 @@ body {
   font-family: var(--font-family-primary), serif;
   color: var(--color-grey-dark);
   background-color: var(--color-background);
+  transition: all 0.25s ease-in;
 }
 
 footer {
-  background-color: var(--color-grey-dark);
+  background-color: var(--color-footer);
   height: 20rem;
   width: 100%;
   display: flex;

@@ -38,10 +38,10 @@
 }
 
 .button > a {
-  background-color: var(--color-grey-dark);
+  background-color: var(--color-button);
   margin: 0 auto;
   padding: 1rem 1.5rem;
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.2rem;

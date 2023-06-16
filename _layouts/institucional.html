@@ -8,8 +8,25 @@
     />
   </head>
   <body>
+    <div id="mobile-menu" class="mobile-menu hidden-mobile-menu">
+      <div id="close-icon" class="close-icon">
+        {% include close_icon.html %}
+      </div>
+      <div class="nav__setting-elements">
+        <div id="theme-icon-sun" class="nav__setting-elements__theme-button">
+          {% include sun_icon.html %}
+        </div>
+        <div id="theme-icon-moon" class="nav__setting-elements__theme-button">
+          {% include moon_icon.html %}
+        </div>
+      </div>
+    </div>
+
     <div id="nav-wrapper">
       <nav>
+        <div id="burger-menu-icon" class="burger-menu-icon"
+          >{% include menu_icon.html %}</div
+        >
         <div class="nav__logo"></div>
         <div class="nav__text-elements">
           <h1 class="nav__blog-name">BBG</h1>
@@ -103,6 +120,6 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    {% include footer.html %} {% include burgermenuscript.html %}
   </body>
 </html>
