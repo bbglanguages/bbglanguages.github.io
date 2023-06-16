@@ -34,9 +34,6 @@
     }
   };
 
-  // Initialization of themes.
-  initThemes();
-
   const setDarkTheme = () => {
     if (BBGpreferredTheme) {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -79,4 +76,7 @@
       mobileMenu.classList.add('hidden-mobile-menu');
     }
   });
+
+  // Initialization of themes.
+  initThemes();
 </script>
