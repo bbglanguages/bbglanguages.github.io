@@ -53,17 +53,13 @@
     }
   };
 
-  if (themeIconSun) {
-    themeIconSun.addEventListener('click', () => {
-      setLightTheme();
-    });
-  }
+  themeIconSun.addEventListener('click', () => {
+    setLightTheme();
+  });
 
-  if (themeIconMoon) {
-    themeIconMoon.addEventListener('click', () => {
-      setDarkTheme();
-    });
-  }
+  themeIconMoon.addEventListener('click', () => {
+    setDarkTheme();
+  });
 
   burgerMenuIcon.addEventListener('click', () => {
     if (mobileMenu.classList.contains('hidden-mobile-menu')) {
