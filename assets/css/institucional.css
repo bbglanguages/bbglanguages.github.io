@@ -343,6 +343,13 @@ nav {
   left: -82vw !important;
 }
 
+.burger-menu-icon,
+.close-icon > svg,
+#theme-icon-sun,
+#theme-icon-moon {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) {
   nav {
     display: grid;
