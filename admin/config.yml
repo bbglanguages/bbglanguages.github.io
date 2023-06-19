@@ -1,5 +1,5 @@
 backend:
-  name: BBG Languages
+  name: github
   repo: bbglanguages/bbglanguages.github.io
   branch: main
   site_domain: bbglanguages.netlify.app
