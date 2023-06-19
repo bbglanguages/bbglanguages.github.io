@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: BBG Languages
   repo: bbglanguages/bbglanguages.github.io
   branch: main
   site_domain: bbglanguages.netlify.app
@@ -28,7 +28,7 @@ collections:
           widget: 'image',
         }
       - { label: 'Summary', name: 'summary', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Post Content', name: 'body', widget: 'markdown' }
 
   - name: 'service' # Used in routes, e.g., /admin/collections/blog
     label: 'Services' # Used in the UI
