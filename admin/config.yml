@@ -57,8 +57,10 @@ collections:
           widget: 'hidden',
           default: 'utilities',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title PT', name: 'title_pt', widget: 'string' }
+      - { label: 'Body PT', name: 'body_pt', widget: 'markdown' }
+      - { label: 'Title EN', name: 'title_en', widget: 'string' }
+      - { label: 'Body EN', name: 'body_en', widget: 'markdown' }
 
   - name: 'contact' # Used in routes, e.g., /admin/collections/blog
     label: 'Contacts' # Used in the UI
