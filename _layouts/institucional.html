@@ -79,12 +79,28 @@
         <div class="content-section__posts-blog">
           {% for post in paginator.posts %}
           <div class="content-section__posts-blog__item">
-            <div class="content-section__posts-blog__item__image"></div>
+            {% if post.thumbnail != nil %}
+            <img
+              class="content-section__posts-blog__item__image"
+              src="{{ post.thumbnail }}"
+              alt="Post Thumbnail"
+            />
+            {% else %}
+            <img
+              class="content-section__posts-blog__item__image"
+              src="/assets/img/posts/vector1080-1080.png"
+              alt="Post Thumbnail"
+            />
+            {% endif %}
             <div class="content-section__posts-blog__item__title">
               <p>{{ post.title }}</p>
             </div>
             <div class="content-section__posts-blog__item__content">
-              {{ post.excerpt }}
+              {% if post.summary != nil %}
+              <p>{{ post.summary }}</p>
+              {% else %}
+              <p>{{ post.excerpt }}</p>
+              {% endif %}
               <a class="button button-sm" href="{{ post.url }}">
                 Read This Post
               </a>

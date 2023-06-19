@@ -33,8 +33,8 @@
 
 .post-header-image {
   max-width: 100%; /* Ensure the image adjusts to the container's width */
-  min-height: 30rem;
-  max-height: 36.75rem; /* Maintain aspect ratio and prevent distortion */
+  /* min-height: 30rem; */
+  /* max-height: 36.75rem; Maintain aspect ratio and prevent distortion */
   background-color: var(--color-primary);
   margin: 3rem 0;
   border-radius: 5px;
@@ -74,9 +74,5 @@
   .main-wrapper {
     margin: 1rem auto;
     width: 90%;
-  }
-
-  .post-header-image {
-    height: 15rem;
   }
 }

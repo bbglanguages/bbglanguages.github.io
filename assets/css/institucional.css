@@ -236,7 +236,9 @@ nav {
 .content-section__posts-blog__item__image {
   background-color: var(--color-grey-dark);
   border-radius: 5px;
+  width: 100%;
 }
+
 .content-section__posts-blog__item__title {
   display: flex;
   align-items: center;

@@ -13,14 +13,19 @@
         >Published on {{ page.date | date: "%-d %B %Y" }}</h2
       >
       <div class="post-header-image-wrapper">
-        <div class="post-header-image"></div>
+        {% if post.bannerimage != nil %}
+        <img class="post-header-image" src="{{ post.bannerimage }}" />
+        {% else %}
+        <img
+          class="post-header-image"
+          src="/assets/img/posts/vector1200-630.png"
+        />
+        {% endif %}
       </div>
       <div class="post-content">{{ page.content }}</div>
 
       <div class="button"><a href="{{ site.url }}#blog">More Posts</a></div>
     </div>
-    {% include footer.html %}
-
-    {% include burgermenuscript.html %}
+    {% include footer.html %} {% include burgermenuscript.html %}
   </body></html
 >
