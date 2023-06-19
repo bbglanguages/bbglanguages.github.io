@@ -318,6 +318,17 @@ nav {
   font-size: 1.2rem;
 }
 
+.content-section__contact-channels__item > p > a {
+  color: var(--color-grey-dark);
+}
+
+.content-section__contact-channels__item > p > a::after {
+  content: '↗';
+  font-size: 0.8rem;
+  position: relative;
+  top: -0.5em;
+}
+
 .content-section__contact-channels__item > p > a:visited {
   color: var(--color-grey-dark);
 }

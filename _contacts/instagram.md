@@ -2,4 +2,4 @@
 title: Instagram
 ---
 
-@bbglanguages
+[BBG Languages](https://instagram.com)
