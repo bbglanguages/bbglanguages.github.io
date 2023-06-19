@@ -15,15 +15,17 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
       - {
-          label: 'Category',
-          name: 'category',
-          widget: 'string',
-          default: 'jekyll',
+          label: 'Banner Image - 1200x630',
+          name: 'bannerimage',
+          widget: 'image',
+        }
+      - {
+          label: 'Thumbnail Image - 1200x1200',
+          name: 'thumbnail',
+          widget: 'image',
         }
       - { label: 'Summary', name: 'summary', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
