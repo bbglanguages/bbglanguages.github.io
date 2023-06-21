@@ -45,7 +45,7 @@
   color: var(--color-white);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
-  margin-left: 1rem;
+  margin: 3rem 0 1rem 1rem;
   border-bottom: 1px dashed var(--color-white);
   width: 90%;
 }
@@ -71,11 +71,18 @@
   height: 2rem;
 }
 
+.nav__setting-elements__theme-button > span {
+  color: var(--color-white);
+}
+
 .nav__setting-elements > .active {
   -webkit-box-shadow: 0 0 7px 2px rgb(255 255 255);
   -moz-box-shadow: 0 0 7px 2px rgb(255 255 255);
   box-shadow: 0 0 7px 2px rgb(255 255 255);
 }
+
+/* language_pt
+language_en */
 
 nav {
   display: grid;

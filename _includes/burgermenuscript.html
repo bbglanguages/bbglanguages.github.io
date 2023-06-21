@@ -4,7 +4,10 @@
   const closeIcon = document.getElementById('close-icon');
   const themeIconSun = document.getElementById('theme-icon-sun');
   const themeIconMoon = document.getElementById('theme-icon-moon');
+  const languageIconPT = document.getElementById('language_pt');
+  const languageIconEN = document.getElementById('language_en');
   const BBGpreferredTheme = localStorage.getItem('BBGpreferredTheme');
+  const BBGpreferredLanguage = localStorage.getItem('BBGpreferredLanguage');
 
   const initThemes = () => {
     if (BBGpreferredTheme === 'dark') {
@@ -33,6 +36,26 @@
       } catch {}
     }
   };
+  // Language -->
+  if (BBGpreferredLanguage === 'pt') {
+    // Mudar alguma coisa no global que mude o idioma
+    try {
+      languageIconPT.classList.add('active');
+      languageIcon.classList.remove('active');
+    } catch {}
+  } else if (BBGpreferredLanguage === 'en') {
+    // Mudar alguma coisa no global que mude o idioma
+    try {
+      languageIconPT.classList.remove('active');
+      languageIcon.classList.add('active');
+    } catch {}
+  } else {
+    // No preference found, set a default language
+    try {
+      languageIconPT.classList.add('active');
+      languageIcon.classList.remove('active');
+    } catch {}
+  }
 
   const setDarkTheme = () => {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -48,6 +71,18 @@
     themeIconMoon.classList.remove('active');
   };
 
+  const setLanguagePT = () => {
+    localStorage.setItem('BBGpreferredLanguage', 'pt');
+    languageIconPT.classList.add('active');
+    languageIconEN.classList.remove('active');
+  };
+
+  const setLanguageEN = () => {
+    localStorage.setItem('BBGpreferredLanguage', 'en');
+    languageIconEN.classList.add('active');
+    languageIconPT.classList.remove('active');
+  };
+
   // Initialization of themes.
   initThemes();
 
@@ -56,8 +91,15 @@
   });
 
   themeIconMoon.addEventListener('click', () => {
-    console.log('Dark theme requested');
     setDarkTheme();
+  });
+
+  languageIconPT.addEventListener('click', () => {
+    setLanguagePT();
+  });
+
+  languageIconEN.addEventListener('click', () => {
+    setLanguageEN();
   });
 
   burgerMenuIcon.addEventListener('click', () => {

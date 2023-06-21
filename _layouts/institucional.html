@@ -21,6 +21,15 @@
           {% include moon_icon.html %}
         </div>
       </div>
+      <p class="mobile-menu__category-title">Language</p>
+      <div class="nav__setting-elements">
+        <div id="language_pt" class="nav__setting-elements__theme-button">
+          <span>PT</span>
+        </div>
+        <div id="language_en" class="nav__setting-elements__theme-button">
+          <span>EN</span>
+        </div>
+      </div>
     </div>
 
     <div id="nav-wrapper">
@@ -54,9 +63,29 @@
     <div id="main-wrapper">
       <!-- Greetings text -->
       <div class="greetings-section">
-        {% for utility in site.utilities %} {% if utility.title == 'Greetings'
-        %} {{ utility.content }} {% endif %} {% endfor %}
+        <!-- /{% if localStorage.getItem('BBGpreferredLanguage') == 'pt' %}  -->
+          <!-- {% for utility in site.utilities %} 
+            {% if utility.title_pt == 'Greetings PT' %} 
+              {{ utility.boty_pt }} 
+            {% endif %} 
+          {% endfor %} 
+        {% else %}  -->
+          {% for utility in site.utilities %} 
+            {% if utility.title_en == 'Greetings EN' %} 
+            <span id="content_greetings">
+              {{ utility.body_pt }} 
+            </span>
+            {% endif %} 
+          {% endfor %}
+        <!-- {% endif %} -->
       </div>
+      <script>
+        const taal = localStorage.getItem('BBGpreferredLanguage');
+        const greetingText = document.getElementById("content_greetings");
+        const greetingText_PT = greetingText.innerText.split('###')[0];
+        const greetingText_EN = greetingText.innerText.split('###')[1];
+        greetingText.innerText = taal === 'pt' ? greetingText_PT : greetingText_EN;
+      </script>
 
       <!-- Services -->
       <div id="services" class="content-section__services">
