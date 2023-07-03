@@ -4,12 +4,12 @@
   const closeIcon = document.getElementById('close-icon');
   const themeIconSun = document.getElementById('theme-icon-sun');
   const themeIconMoon = document.getElementById('theme-icon-moon');
-  const languageIconPT = document.getElementById('language_pt');
-  const languageIconEN = document.getElementById('language_en');
+  const languageIconPT = document.getElementById('language-icon-pt');
+  const languageIconEN = document.getElementById('language-icon-en');
   const BBGpreferredTheme = localStorage.getItem('BBGpreferredTheme');
   const BBGpreferredLanguage = localStorage.getItem('BBGpreferredLanguage');
 
-  const initThemes = () => {
+  const initThemesAndLanguages = () => {
     if (BBGpreferredTheme === 'dark') {
       // Dark mode is preferred
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -35,27 +35,28 @@
         themeIconMoon.classList.remove('active');
       } catch {}
     }
+
+    // Language
+    if (BBGpreferredLanguage === 'pt') {
+      // Mudar alguma coisa no global que mude o idioma
+      try {
+        languageIconPT.classList.add('active');
+        languageIconEN.classList.remove('active');
+      } catch {}
+    } else if (BBGpreferredLanguage === 'en') {
+      // Mudar alguma coisa no global que mude o idioma
+      try {
+        languageIconPT.classList.remove('active');
+        languageIconEN.classList.add('active');
+      } catch {}
+    } else {
+      // No preference found, set a default language (EN)
+      try {
+        languageIconEN.classList.add('active');
+        languageIconPT.classList.remove('active');
+      } catch {}
+    }
   };
-  // Language -->
-  if (BBGpreferredLanguage === 'pt') {
-    // Mudar alguma coisa no global que mude o idioma
-    try {
-      languageIconPT.classList.add('active');
-      languageIcon.classList.remove('active');
-    } catch {}
-  } else if (BBGpreferredLanguage === 'en') {
-    // Mudar alguma coisa no global que mude o idioma
-    try {
-      languageIconPT.classList.remove('active');
-      languageIcon.classList.add('active');
-    } catch {}
-  } else {
-    // No preference found, set a default language
-    try {
-      languageIconPT.classList.add('active');
-      languageIcon.classList.remove('active');
-    } catch {}
-  }
 
   const setDarkTheme = () => {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -75,16 +76,15 @@
     localStorage.setItem('BBGpreferredLanguage', 'pt');
     languageIconPT.classList.add('active');
     languageIconEN.classList.remove('active');
+    location.reload();
   };
 
   const setLanguageEN = () => {
     localStorage.setItem('BBGpreferredLanguage', 'en');
     languageIconEN.classList.add('active');
     languageIconPT.classList.remove('active');
+    location.reload();
   };
-
-  // Initialization of themes.
-  initThemes();
 
   themeIconSun.addEventListener('click', () => {
     setLightTheme();
@@ -113,4 +113,7 @@
       mobileMenu.classList.add('hidden-mobile-menu');
     }
   });
+
+  // Initialization of themes.
+  initThemesAndLanguages();
 </script>

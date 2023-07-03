@@ -23,10 +23,10 @@
       </div>
       <p class="mobile-menu__category-title">Language</p>
       <div class="nav__setting-elements">
-        <div id="language_pt" class="nav__setting-elements__theme-button">
+        <div id="language-icon-pt" class="nav__setting-elements__theme-button">
           <span>PT</span>
         </div>
-        <div id="language_en" class="nav__setting-elements__theme-button">
+        <div id="language-icon-en" class="nav__setting-elements__theme-button">
           <span>EN</span>
         </div>
       </div>
@@ -45,61 +45,102 @@
         <div class="nav__links-elements">
           <ul>
             <li
-              ><a href="https://bbglanguages.github.io/#services"
+              ><a
+                id="urlServices"
+                href="https://bbglanguages.github.io/#services"
                 >Services</a
               ></li
             >
             <span>•</span>
-            <li><a href="https://bbglanguages.github.io/#blog">Blog</a></li>
+            <li
+              ><a id="urlBlog" href="https://bbglanguages.github.io/#blog"
+                >Blog</a
+              ></li
+            >
             <span>•</span>
             <li
-              ><a href="https://bbglanguages.github.io/#contact">Contact</a></li
+              ><a id="urlContact" href="https://bbglanguages.github.io/#contact"
+                >Contact</a
+              ></li
             >
           </ul>
         </div>
       </nav>
     </div>
+    <script>
+      let taal = localStorage.getItem('BBGpreferredLanguage');
+      if (!taal) {
+        taal = 'en';
+      }
+      const urlServices = document.getElementById('urlServices');
+      const urlContact = document.getElementById('urlContact');
+      urlServices.innerText = taal === 'en' ? 'Services' : 'Serviços';
+      urlContact.innerText = taal === 'en' ? 'Contact' : 'Contato';
+    </script>
 
     <div id="main-wrapper">
       <!-- Greetings text -->
       <div class="greetings-section">
-        <!-- /{% if localStorage.getItem('BBGpreferredLanguage') == 'pt' %}  -->
-          <!-- {% for utility in site.utilities %} 
-            {% if utility.title_pt == 'Greetings PT' %} 
-              {{ utility.boty_pt }} 
-            {% endif %} 
-          {% endfor %} 
-        {% else %}  -->
-          {% for utility in site.utilities %} 
-            {% if utility.title_en == 'Greetings EN' %} 
-            <span id="content_greetings">
-              {{ utility.body_pt }} 
-            </span>
-            {% endif %} 
-          {% endfor %}
-        <!-- {% endif %} -->
+        {% for utility in site.utilities %} {% if utility.title == 'Greetings'
+        %}
+        <span id="content_greetings"> {{ utility.content }} </span>
+        {% endif %} {% endfor %}
       </div>
       <script>
-        const taal = localStorage.getItem('BBGpreferredLanguage');
-        const greetingText = document.getElementById("content_greetings");
-        const greetingText_PT = greetingText.innerText.split('###')[0];
-        const greetingText_EN = greetingText.innerText.split('###')[1];
-        greetingText.innerText = taal === 'pt' ? greetingText_PT : greetingText_EN;
+        const greetingText = document.getElementById('content_greetings');
+        const greetingText_EN = greetingText.innerText.split('###')[0];
+        const greetingText_PT = greetingText.innerText.split('###')[1];
+        greetingText.innerText =
+          taal === 'pt' ? greetingText_PT : greetingText_EN;
       </script>
 
       <!-- Services -->
       <div id="services" class="content-section__services">
-        <h2 class="content-section__services-title">Services</h2>
+        <h2
+          id="content-section__services-title"
+          class="content-section__services-title"
+          >Services</h2
+        >
         <span class="content-section__title-separator"></span>
         <div class="content-section__posts-services">
           {% for service in site.services %}
           <div class="content-section__posts-services__item">
-            <h3> {{ service.title}} </h3>
-            <a class="button button-sm" href="{{ service.url }}">Saiba Mais</a>
+            <h3 class="content-section__posts-services__item-title">
+              {{ service.title }}
+            </h3>
+            <a
+              class="button button-sm content-section__posts-services__item-url"
+              href="{{ service.url }}"
+              >Saiba Mais</a
+            >
           </div>
           {% endfor %}
         </div>
       </div>
+      <script>
+        const serviceTitle = document.getElementById(
+          'content-section__services-title'
+        );
+        serviceTitle.innerText = taal === 'en' ? 'Services' : 'Serviços';
+        const serviceItemTitles = document.getElementsByClassName(
+          'content-section__posts-services__item-title'
+        );
+
+        const serviceItemUrl = document.getElementsByClassName(
+          'content-section__posts-services__item-url'
+        );
+
+        for (let element of serviceItemTitles) {
+          const serviceItemTitle_EN = element.innerText.split('###')[0];
+          const serviceItemTitle_PT = element.innerText.split('###')[1];
+          element.innerText =
+            taal === 'en' ? serviceItemTitle_EN : serviceItemTitle_PT;
+        }
+
+        for (let element of serviceItemUrl) {
+          element.innerText = taal === 'en' ? 'More' : 'Saiba Mais';
+        }
+      </script>
 
       <!-- Blog posts -->
       <div class="content-section__blog" id="blog">
@@ -122,44 +163,94 @@
             />
             {% endif %}
             <div class="content-section__posts-blog__item__title">
-              <p>{{ post.title }}</p>
+              <p class="content-section__posts-blog__item__title--content"
+                >{{ post.title }}</p
+              >
             </div>
             <div class="content-section__posts-blog__item__content">
-              {% if post.summary != nil %}
-              <p>{{ post.summary }}</p>
-              {% else %}
-              <p>{{ post.excerpt }}</p>
-              {% endif %}
-              <a class="button button-sm" href="{{ post.url }}">
-                Read This Post
-              </a>
+              {{ post.content }}
             </div>
+            <a class="button button-sm post-url-button" href="{{ post.url }}">
+              Read This Post
+            </a>
           </div>
           {% endfor %}
         </div>
       </div>
+      <script>
+        const postsTitles = document.getElementsByClassName(
+          'content-section__posts-blog__item__title--content'
+        );
+        const postsSummaries = document.getElementsByClassName(
+          'content-section__posts-blog__item__content'
+        );
+        const postUrlButtons =
+          document.getElementsByClassName('post-url-button');
+        for (let i = 0; i < postsTitles.length; i++) {
+          let postItemTitle_EN = postsTitles[i].innerText.split('###')[0];
+          let postItemTitle_PT = postsTitles[i].innerText.split('###')[1];
+          let postItemSummary_EN = postsSummaries[i].innerText.split('###')[0];
+          let postItemSummary_PT = postsSummaries[i].innerText.split('###')[1];
+          postsTitles[i].innerText =
+            taal === 'en' ? postItemTitle_EN : postItemTitle_PT;
+          postsSummaries[i].innerText =
+            taal === 'en' ? postItemSummary_EN : postItemSummary_PT;
+          postUrlButtons[i].innerHTML =
+            taal === 'en' ? 'Read This Post' : 'Leia Mais';
+
+          postsSummaries[i].innerText =
+            postsSummaries[i].innerText.split(' ').slice(0, 30).join(' ') +
+            '...';
+        }
+      </script>
 
       <div class="pagination-wrapper">
         {% if paginator.page != 1 %}
         <span>
-          <a href="{{paginator.previous_page_path}}#blog">Previous</a>
+          <a
+            id="pagination-previous-button"
+            href="{{paginator.previous_page_path}}#blog"
+            >Previous</a
+          >
         </span>
         {% else %}
-        <span class="disabled" href="">Previous</span>
+        <span id="pagination-previous-button" class="disabled" href=""
+          >Previous</span
+        >
         {% endif %}
         <span>•</span>
         <span> {{ paginator.page }} of {{ paginator.total_pages }} </span>
         <span>•</span>
         {% if paginator.page != paginator.total_pages %}
-        <span><a href="{{paginator.next_page_path}}#blog">More</a></span>
+        <span
+          ><a
+            id="pagination-next-button"
+            href="{{paginator.next_page_path}}#blog"
+            >More</a
+          ></span
+        >
         {% else %}
-        <span class="disabled">More</span>
+        <span id="pagination-next-button" class="disabled">More</span>
         {% endif %}
       </div>
+      <script>
+        const paginationNextButton = document.getElementById(
+          'pagination-next-button'
+        );
+        const paginationPreviousButton = document.getElementById(
+          'pagination-previous-button'
+        );
+
+        paginationNextButton.innerText = taal === 'en' ? 'More' : 'Próximo';
+        paginationPreviousButton.innerText =
+          taal === 'en' ? 'Previous' : 'Anterior';
+      </script>
 
       <!-- Contact -->
       <div id="contact" class="content-section__contact">
-        <h2 class="content-section__contact-title">Contact</h2>
+        <h2 id="contactTitle" class="content-section__contact-title"
+          >Contact</h2
+        >
         <span class="content-section__title-separator"></span>
         <div class="content-section__contact-channels">
           {% for contact in site.contacts %}
@@ -170,6 +261,10 @@
           {% endfor %}
         </div>
       </div>
+      <script>
+        const contactTitle = document.getElementById('contactTitle');
+        contactTitle.innerText = taal === 'en' ? 'Contact' : 'Contato';
+      </script>
     </div>
 
     {% include footer.html %} {% include burgermenuscript.html %}
