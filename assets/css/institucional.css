@@ -416,10 +416,12 @@ nav {
   .nav__blog-name {
     font-size: 6rem;
     line-height: 6rem;
+    padding-left: 0;
   }
 
   .nav__blog-name__subname {
     font-size: 1.5rem;
+    padding-left: 0;
   }
 
   .nav__links-elements {
