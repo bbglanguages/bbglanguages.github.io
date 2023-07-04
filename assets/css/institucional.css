@@ -102,6 +102,11 @@ nav {
   border-radius: 100%;
   justify-self: center;
   grid-row: 1 / 3;
+  background-image: url('../img/logo-white-no-letters.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
 }
 
 .nav__text-elements {
@@ -113,17 +118,25 @@ nav {
   line-height: 13rem;
   font-weight: lighter;
   margin: 0 0;
+  font-family: 'Aexpective';
+  padding-left: 2rem;
 }
 
 .nav__blog-name__subname {
   font-size: 3rem;
   font-weight: lighter;
   margin: 0 0;
+  font-family: 'Aexpective';
+  padding-left: 3rem;
 }
 
 .nav__links-elements {
   grid-column: 1/3;
   text-align: center;
+}
+
+.nav__links-elements > ul {
+  padding: 0;
 }
 
 .nav__links-elements > ul > li {

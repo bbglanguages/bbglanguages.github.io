@@ -5,7 +5,6 @@ title: |-
 layout: post
 author: BBG
 date: '2023-04-21 09:19:22 +0000'
-thumbnail: "/assets/img/posts/icon_144x144.png"
 category: jekyll
 summary: Lorem ipsum da tradução como ferramenta de filling textual
 ---

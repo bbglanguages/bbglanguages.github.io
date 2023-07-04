@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Aexpective';
+  src: url('../fonts/WOFF/AEXPECTIVE.woff2');
+}
+
 [data-theme='light'] {
   --color-primary: #f9d319;
   --color-secondary: #fce990;
@@ -10,6 +15,7 @@
   --color-nav-menu-icon: #4a4747;
   --color-footer: #4a4747;
   --font-family-primary: 'Trocchi';
+  --font-family-logo: 'Aexpective';
 }
 
 [data-theme='dark'] {
@@ -24,6 +30,7 @@
   --color-nav-menu-icon: #ffffff;
   --color-footer: #4b2e89;
   --font-family-primary: 'Trocchi';
+  --font-family-logo: 'Aexpective';
 }
 
 html,
@@ -62,6 +69,11 @@ footer > .footer-section__logo > .image {
   height: 10rem;
   border-radius: 100%;
   text-align: center;
+  background-image: url('../img/logo-white-no-letters.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
 }
 
 footer > .footer-section__logo > .text {

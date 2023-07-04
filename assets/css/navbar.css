@@ -44,8 +44,12 @@ nav {
   height: 6rem;
   width: 6rem;
   min-width: 6rem;
-  background-color: var(--color-grey-dark);
   border-radius: 100%;
+  background-image: url('../img/logo-white-no-letters.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
 }
 
 .nav__all-elements {
@@ -66,12 +70,16 @@ nav {
   font-size: 3rem;
   font-weight: lighter;
   margin: 0 0;
+  font-family: 'Aexpective';
+  padding-left: 0rem;
 }
 
 .nav__blog-name__subname {
-  font-size: 2rem;
+  font-size: 1.22rem;
   font-weight: lighter;
   margin: 0 0;
+  font-family: 'Aexpective';
+  padding-left: 0rem;
 }
 
 .nav__blog-name > a,

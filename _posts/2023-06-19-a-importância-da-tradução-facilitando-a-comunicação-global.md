@@ -3,8 +3,6 @@ title: 'The Importance of Translation: Facilitating Global Communication ### A I
   da Tradução: Facilitando a Comunicação Global'
 layout: post
 date: '2023-06-19 09:58:33 +0000'
-bannerimage: "/assets/img/posts/vector1200-1200.png"
-thumbnail: "/assets/img/posts/vector1080-1080.png"
 summary: A tradução é um processo fundamental na sociedade contemporânea, pois desempenha
   um papel essencial na comunicação global. Com o mundo cada vez mais conectado, a
   tradução tornou-se uma ferramenta indispensável...
