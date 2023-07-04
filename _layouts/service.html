@@ -7,14 +7,36 @@
   <body>
     {% include navbar.html %}
     <div class="main-wrapper">
-      <p class="service-category">Services</p>
-      <h1 class="service-title">{{ page.title }} </h1>
-      <div class="service-content">{{ page.content }}</div>
+      <p id="servicesCategory" class="service-category">Services</p>
+      <h1 id="servicesTitle" class="service-title">{{ page.title }} </h1>
+      <div id="servicesContent" class="service-content">{{ page.content }}</div>
 
       <div class="button"
-        ><a href="{{ site.url }}#services">More Services</a></div
+        ><a id="moreServicesButton" href="{{ site.url }}#services"
+          >More Services</a
+        ></div
       >
     </div>
     {% include footer.html %} {% include burgermenuscript.html %}
-  </body></html
->
+  </body>
+  <script>
+    const servicesCategory = document.getElementById('servicesCategory');
+    servicesCategory.innerHTML = taal === 'en' ? 'Services' : 'Serviços';
+
+    const servicesTitle = document.getElementById('servicesTitle');
+    const servicesTitle_EN = servicesTitle.innerText.split('###')[0];
+    const servicesTitle_PT = servicesTitle.innerText.split('###')[1];
+    servicesTitle.innerHTML =
+      taal === 'en' ? servicesTitle_EN : servicesTitle_PT;
+
+    const servicesContent = document.getElementById('servicesContent');
+    const servicesContent_EN = servicesContent.innerText.split('###')[0];
+    const servicesContent_PT = servicesContent.innerText.split('###')[1];
+    servicesContent.innerHTML =
+      taal === 'en' ? servicesContent_EN : servicesContent_PT;
+
+    const moreServicesButton = document.getElementById('moreServicesButton');
+    moreServicesButton.innerHTML =
+      taal === 'en' ? 'More Services' : 'Outros Serviços';
+  </script>
+</html>
