@@ -21,9 +21,7 @@ Translation extends beyond written text and is also essential in the field of or
 However, it is important to highlight the challenges faced by translators. Translation involves more than simply replacing words from one language with words from another. It requires understanding cultural nuances, specific contexts, and idiomatic expressions to ensure accurate and faithful translations. Translators must be skilled and have extensive knowledge of the languages involved as well as the subject areas being addressed.
 
 In conclusion, translation plays a vital role in global communication, facilitating the exchange of information, strengthening international relations, and promoting mutual understanding among diverse cultures. It is thanks to translation that we can overcome language barriers and achieve a more connected and collaborative world. As globalization progresses, the importance of translation will continue to grow, ensuring that ideas, knowledge, and perspectives are shared and appreciated worldwide. 
-###
-
-A tradução é um processo fundamental na sociedade contemporânea, pois desempenha um papel essencial na comunicação global. Com o mundo cada vez mais conectado, a tradução tornou-se uma ferramenta indispensável para superar barreiras linguísticas e permitir a troca de informações entre culturas e países distintos.
+###A tradução é um processo fundamental na sociedade contemporânea, pois desempenha um papel essencial na comunicação global. Com o mundo cada vez mais conectado, a tradução tornou-se uma ferramenta indispensável para superar barreiras linguísticas e permitir a troca de informações entre culturas e países distintos.
 
 Primeiramente, a tradução desempenha um papel crucial no fortalecimento das relações internacionais. Ao permitir que pessoas de diferentes idiomas se compreendam, a tradução ajuda a promover a cooperação, o comércio e o intercâmbio cultural. Por exemplo, em negociações comerciais, a tradução adequada de contratos e documentos é essencial para evitar mal-entendidos e estabelecer acordos sólidos entre as partes envolvidas.
 

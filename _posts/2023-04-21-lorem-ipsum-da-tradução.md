@@ -30,8 +30,7 @@ The challenges in captions, in my opinion, are:
 - Time restrictions (considering our attention span);
 - Exposed translation (as it can be very different from how we would translate a report, for example);
 - Conciseness capability;
-- Synchronization, which takes time!
-###
+- Synchronization, which takes time!###
 Dois segundos não importam muito... a menos que você esteja lidando com legendas!
 
 Desde ontem, estou realizando a garantia de qualidade para legendas para um provedor de tecnologia. 🎞️

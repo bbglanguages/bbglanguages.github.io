@@ -29,10 +29,7 @@ Meets data security obligations with easily enforced encryption.
   Our premium solution for mobile device security meets data security requirements with easily applied encryption.
   
   Easier than it seems at first, right?
-	
-###
-
-Hoje, depois de trabalhar em um projeto de localização de site no ramo da #cibersegurança, percebi que as tags que costumavam me "assustar" quando comecei minha jornada tecnológica (localização + cibersegurança + programação) não são mais um bicho de sete cabeças! 🚀
+	###Hoje, depois de trabalhar em um projeto de localização de site no ramo da #cibersegurança, percebi que as tags que costumavam me "assustar" quando comecei minha jornada tecnológica (localização + cibersegurança + programação) não são mais um bicho de sete cabeças! 🚀
 
 E por que digo isso?
 

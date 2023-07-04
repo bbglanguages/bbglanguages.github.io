@@ -28,11 +28,7 @@ Solution: Instead of including all individuals with the pronoun "them," simply o
 
 Solution: _padres_ could be literally translated as "parents." However, I'm not particularly fond of this translation since children are cared for by mothers, fathers, grandparents, and other individuals. By using a more inclusive term like "caregivers," we can provide attention to a broader range of individuals.
 
-Would you do it differently? Share your thoughts with us in the comments 😍
-
-###
-
-Veja abaixo alguns exemplos de como é possível alcançar seus objetivos com adaptações pensadas para incluir seus leitores e leitoras com pequenas modificações.
+Would you do it differently? Share your thoughts with us in the comments 😍 ### Veja abaixo alguns exemplos de como é possível alcançar seus objetivos com adaptações pensadas para incluir seus leitores e leitoras com pequenas modificações.
 
 1) …pero hay razones para ser cautelosos.
 

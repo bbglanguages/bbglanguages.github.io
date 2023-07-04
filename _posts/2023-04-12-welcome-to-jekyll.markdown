@@ -32,9 +32,7 @@ Let's get to work! It's time to deal with words, user interface, user experience
 
 Translation itself is just a part of the work! And mind you, I only talked about the "preparation" stage.
 
-✨ Showing clients the step-by-step process is proof of the valuable work we deliver in #localization.
-
-###
+✨ Showing clients the step-by-step process is proof of the valuable work we deliver in #localization. ###
 Estou começando um novo projeto de #localização de site com 21 páginas da web no campo de #cibersegurança. Montei um passo a passo para a primeira parte de cada projeto, mostrando o que é preciso fazer antes de mergulhar na #tradução:
 
 1. Preparação 👩‍💻

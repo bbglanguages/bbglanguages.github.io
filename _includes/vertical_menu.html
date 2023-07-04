@@ -1,16 +1,26 @@
 <div id="mobile-menu" class="mobile-menu hidden-mobile-menu">
   <div id="close-icon" class="close-icon"> {% include close_icon.html %} </div>
 
-  <p class="mobile-menu__category-title">Pages</p>
+  <p id="pagesTitle" class="mobile-menu__category-title">Pages</p>
   <div class="mobile_menu__nav__links-elements">
     <ul>
-      <li><a href="https://bbglanguages.github.io/#services">SERVICES</a></li>
+      <li
+        ><a
+          id="pagesItemServices"
+          href="https://bbglanguages.github.io/#services"
+          >SERVICES</a
+        ></li
+      >
       <li><a href="https://bbglanguages.github.io/#blog">BLOG</a></li>
-      <li><a href="https://bbglanguages.github.io/#contact">CONTACT</a></li>
+      <li
+        ><a id="pagesItemContact" href="https://bbglanguages.github.io/#contact"
+          >CONTACT</a
+        ></li
+      >
     </ul>
   </div>
 
-  <p class="mobile-menu__category-title">Theme</p>
+  <p id="themeTitle" class="mobile-menu__category-title">Theme</p>
   <div class="nav__setting-elements">
     <div id="theme-icon-sun" class="nav__setting-elements__theme-button">
       {% include sun_icon.html %}
@@ -20,7 +30,7 @@
     </div>
   </div>
 
-  <p class="mobile-menu__category-title">Language</p>
+  <p id="languageTitle" class="mobile-menu__category-title">Language</p>
   <div class="nav__setting-elements">
     <div id="language-icon-pt" class="nav__setting-elements__theme-button">
       <span>PT</span>
@@ -30,3 +40,23 @@
     </div>
   </div>
 </div>
+
+<script>
+  const taal = localStorage.getItem('BBGpreferredLanguage')
+    ? localStorage.getItem('BBGpreferredLanguage')
+    : 'en';
+  localStorage.setItem('BBGpreferredLanguage', taal);
+
+  const pagesTitle = document.getElementById('pagesTitle');
+  const pagesItemServices = document.getElementById('pagesItemServices');
+  const pagesItemContact = document.getElementById('pagesItemContact');
+  pagesTitle.innerText = taal === 'en' ? 'Pages' : 'Páginas';
+  pagesItemServices.innerText = taal === 'en' ? 'SERVICES' : 'SERVIÇOS';
+  pagesItemContact.innerText = taal === 'en' ? 'CONTACT' : 'CONTATO';
+
+  const themeTitle = document.getElementById('themeTitle');
+  themeTitle.innerText = taal === 'en' ? 'Theme' : 'Tema';
+
+  const languageTitle = document.getElementById('languageTitle');
+  languageTitle.innerText = taal === 'en' ? 'Language' : 'Idioma';
+</script>

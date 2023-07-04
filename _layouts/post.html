@@ -8,7 +8,7 @@
     {% include navbar.html %}
     <div class="main-wrapper">
       <p class="post-category">Blog</p>
-      <h1 class="post-title">{{ page.title }} </h1>
+      <h1 id="postTitle" class="post-title">{{ page.title }} </h1>
       <h2 class="post-publishing-date"
         >Published on {{ page.date | date: "%-d %B %Y" }}</h2
       >
@@ -22,10 +22,28 @@
         />
         {% endif %}
       </div>
-      <div class="post-content">{{ page.content }}</div>
+      <div id="postContent" class="post-content">{{ page.content }}</div>
 
-      <div class="button"><a href="{{ site.url }}#blog">More Posts</a></div>
+      <div class="button"
+        ><a id="morePostsButton" href="{{ site.url }}#blog">More Posts</a></div
+      >
     </div>
     {% include footer.html %} {% include burgermenuscript.html %}
   </body></html
 >
+<script>
+  const postTitle = document.getElementById('postTitle');
+  const postTitle_EN = postTitle.innerText.split('###')[0];
+  const postTitle_PT = postTitle.innerText.split('###')[1];
+  postTitle.innerText = taal === 'en' ? postTitle_EN : postTitle_PT;
+
+  const postContent = document.getElementById('postContent');
+  const postContent_EN = postContent.innerText.split('###')[0];
+  const postContent_PT = postContent.innerText.split('###')[1];
+  postContent.innerText = taal === 'en' ? postContent_EN : postContent_PT;
+
+  const morePostsButton = document.getElementById('morePostsButton');
+  const morePostsButton_EN = morePostsButton.innerText.split('###')[0];
+  const morePostsButton_PT = morePostsButton.innerText.split('###')[1];
+  morePostsButton.innerText = taal === 'en' ? 'More Posts' : 'Mais Posts';
+</script>
