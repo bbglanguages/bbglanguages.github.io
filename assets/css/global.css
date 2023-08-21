@@ -4,8 +4,8 @@
 }
 
 [data-theme='light'] {
-  --color-primary: #f9d319;
-  --color-secondary: #fce990;
+  --color-primary: #F5BD1F;
+  --color-secondary: #FFD93D;
   --color-background: #fff7d4;
   --color-grey-dark: #4a4747;
   --color-grey-light: #868585;
@@ -19,8 +19,8 @@
 }
 
 [data-theme='dark'] {
-  --color-primary: #4b2e89;
-  --color-secondary: #a65ff9;
+  --color-primary: #5D2689;
+  --color-secondary: #8736AA;
   --color-background: #1c0155;
   --color-grey-dark: #fff;
   --color-grey-light: #fff;
